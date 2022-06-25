@@ -1,0 +1,53 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Python.py" type="Script" id=1]
+[ext_resource path="res://Gdscript.gd" type="Script" id=2]
+
+[node name="World" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Python" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+margin_left = 37.0
+margin_top = 19.0
+margin_right = 118.0
+margin_bottom = 71.0
+text = "Private Key:"
+align = 1
+valign = 1
+
+[node name="PrivateKey" type="LineEdit" parent="CanvasLayer"]
+margin_left = 136.0
+margin_top = 18.0
+margin_right = 1015.0
+margin_bottom = 70.0
+text = "sfsfdfdsfdsfsdfsfsf"
+
+[node name="Label3" type="Label" parent="CanvasLayer"]
+margin_left = 35.0
+margin_top = 89.0
+margin_right = 116.0
+margin_bottom = 141.0
+text = "Public Key:"
+align = 1
+valign = 1
+
+[node name="PublicKey" type="LineEdit" parent="CanvasLayer"]
+margin_left = 134.0
+margin_top = 88.0
+margin_right = 1013.0
+margin_bottom = 140.0
+text = "sfsfdfdsfdsfsdfsfsf"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+margin_left = 44.0
+margin_top = 167.0
+margin_right = 171.0
+margin_bottom = 187.0
+text = "Generate Address"
+
+[connection signal="button_down" from="CanvasLayer/Button" to="." method="_on_Button_button_down"]
